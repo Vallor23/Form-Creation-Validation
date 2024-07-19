@@ -8,26 +8,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // prevents the form from submitting to the server
         event.preventDefault();
 
-        const usernameInput = document.getElementById('username').value.trim();
-        const emailInput = document.getElementById('email').value.trim();
-        const passwordInput = document.getElementById('password').value.trim();
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
         // validation logic
         // initialize validation variables
         let isValid = true;    //tracks the overall validation status
         let messages = [];      //stores validation error messages
 
-        if (usernameInput.length < 3) {
+        if (username.length < 3) {
             isValid = false;
             messages.push('username must be more than 3 characters');
         }
 
-        if (!emailInput.includes(`@`) || !emailInput.includes(`.`)) {
+        if (!email.includes(`@`) || !email.includes(`.`)) {
             isValid = false;
             messages.push('email must contain @ and . characters');
         }
 
-        if (passwordInput.length < 8) {
+        if (password.length < 8) {
             isValid = false;
             messages.push('password must be atleast 8 characters long');
         }
