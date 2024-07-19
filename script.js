@@ -1,10 +1,10 @@
 // Ensures javascript downloads after the HTML has loaded
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    const form = document.getElementById('registrationForm');
+    const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', function(event) {
         // prevents the form from submitting to the server
         event.preventDefault();
 
